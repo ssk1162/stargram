@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/frame"
             app:itemIconSize="30dp"
+            app:itemIconTint="@color/white"
             app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_navigation" />
 

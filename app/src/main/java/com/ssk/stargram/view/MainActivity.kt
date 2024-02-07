@@ -3,6 +3,7 @@ package com.ssk.stargram.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.google.android.material.navigation.NavigationBarView
 import com.ssk.stargram.R
 import com.ssk.stargram.databinding.ActivityMainBinding
 

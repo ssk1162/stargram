@@ -5,9 +5,13 @@ import androidx.lifecycle.ViewModel
 
 class UserViewModel : ViewModel() {
 
-    val userId : MutableLiveData<String> = MutableLiveData("")
-    val userPassword : MutableLiveData<String> = MutableLiveData("")
+    var userId : MutableLiveData<String> = MutableLiveData("")
+    var userPassword : MutableLiveData<String> = MutableLiveData("")
 
+    var loginbtn : MutableLiveData<Boolean> = MutableLiveData(false)
 
+    fun login() {
+        loginbtn.value = true
+    }
 
 }
