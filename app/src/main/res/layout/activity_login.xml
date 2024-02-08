@@ -92,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/round_btn"
+                android:onClick="@{() -> viewModel.joinbtn()}"
                 android:text="회원가입"
                 android:textColor="@color/white" />
 

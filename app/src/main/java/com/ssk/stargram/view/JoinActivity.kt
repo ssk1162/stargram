@@ -6,18 +6,19 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.ssk.stargram.R
+import com.ssk.stargram.databinding.ActivityJoinBinding
 import com.ssk.stargram.databinding.ActivityLoginBinding
 import com.ssk.stargram.viewModel.UserViewModel
 
-class LoginActivity : AppCompatActivity() {
+class JoinActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityLoginBinding
+    lateinit var binding : ActivityJoinBinding
 
     private val userViewModel : UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_join)
 
         binding.lifecycleOwner = this
         binding.viewModel = userViewModel
@@ -27,18 +28,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setObserve() {
-        userViewModel.loginbtn.observe(this) {
+        userViewModel.backbtn.observe(this) {
             if (it) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
             }
         }
-
-        userViewModel.joinbtn.observe(this) {
-            if (it) {
-                startActivity(Intent(this, JoinActivity::class.java))
-            }
-        }
-
     }
 
 }
